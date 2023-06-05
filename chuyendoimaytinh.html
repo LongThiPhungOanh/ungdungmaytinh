@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function chuyendoi(thamso){
+        var sothunhat = document.getElementById("number1").value;
+        var sothuhai = document.getElementById("number2").value;
+        var kq;
+        if(thamso == "cong"){
+            kq = parseInt(sothunhat) + parseInt(sothuhai);
+        }else if(thamso == "tru"){
+            kq = sothunhat - sothuhai;
+        }else if(thamso == "nhan"){
+            kq = sothunhat * sothuhai;
+        }else if (thamso == "chia"){
+            kq = sothunhat / sothuhai;
+        }
+        document.getElementById("result").innerHTML = kq;
+    }
+</script>
+<h2>Caculator</h2>
+<tr>
+    <input id="number1" type="number">
+    <input id="number2" type="number"><br><br>
+</tr>
+<tr>
+    <button onclick="chuyendoi('cong')">Adition(+)</button>
+    <button onclick="chuyendoi('tru')">Subtraction(-)</button>
+    <button onclick="chuyendoi('nhan')">Multiplivation(*)</button>
+    <button onclick="chuyendoi('chia')">Division(/)</button>
+    <br>
+</tr>
+<h3 id="result">Result Division:</h3>
+</body>
+</html>
